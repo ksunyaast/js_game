@@ -122,11 +122,12 @@ class Level {
 		return undefined;
 	}
 	removeActor(object) {
-		for(let x=0; x < this.actors.length; x++) {
-			if(object === this.actors[x]) {
-				this.actors.splice(x, 1);
-			}
-		}
+		// for(let x=0; x < this.actors.length; x++) {
+		// 	if(object === this.actors[x]) {
+		// 		this.actors.splice(x, 1);
+		// 	}
+		// }
+		this.actors = this.actors.filter(actor => actor !== object);
 	}
 	noMoreActors(objectType) {
 		for(var actor of this.actors) {
